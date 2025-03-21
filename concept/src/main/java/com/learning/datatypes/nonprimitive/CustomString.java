@@ -1,5 +1,7 @@
 package com.learning.datatypes.nonprimitive;
 
+import java.util.Arrays;
+
 
 public class CustomString {
 
@@ -29,6 +31,7 @@ public class CustomString {
 
     //join() method joins the elements of an array into a single string
     public void join(String[] val){
+        print(val);
         print(String.join(" ", val));
     }
 
@@ -38,15 +41,52 @@ public class CustomString {
         print(rs);
     }
 
-
-
-
-
-    public <T> void print(T[] value){
-        for(T val : value){
-            System.out.println(val);
-        }
+    public void isEmpty(String val){
+        //The isEmpty() method checks whether a string is empty or not.
+        //It returns true if the length of the string is 0, otherwise, it returns false.
+        print(val.isEmpty());
     }
+
+    public void length(String val){
+
+        //The length() method returns the length of a string.
+        //The length is equal to the number of 16-bit Unicode characters in the string.
+        print(val.length());
+    }
+
+    public void replace(String val, String oldChar, String newChar){
+
+        //The replace() method replaces all occurrences of a specified character or substring in a string with another character or substring.
+        //It returns a new string that represents the replacement.
+        //The replace() method is case-sensitive.
+        //To perform a case-insensitive replacement, you can use the replaceAll() method.
+        //The replace() method doesn't change the original string.
+        print(val);
+        print(val.replace(oldChar, newChar));
+    }
+
+    // public void replaceAll()
+
+    //difference between replace() and replaceAll()
+    //The replace() method replaces all occurrences of a specified character or substring in a string with another character or substring.
+    //The replaceAll() method replaces all occurrences of a specified character or substring in a string with another character or substring.
+    //The replaceAll() method is case-sensitive.
+    //To perform a case-insensitive replacement, you can use the replaceAll() method.
+    //The replaceAll() method doesn't change the original string.
+
+
+
+
+
+    //generic method to print any type of array
+    public <T> void print(T[] value){
+        // for(T val : value){
+        //     System.out.println(val);
+        // }
+        System.out.println(Arrays.toString(value));
+    }
+
+    //generic method to print any type of value
     public <T> void print(T value){
         System.out.println(value);
     }
@@ -69,15 +109,51 @@ public class CustomString {
 
 
         //join()
+        // array to string
         String[] str = {"Hello", "World", "Java"};
         cs.join(str);
 
         //split()
+        // string to array
         String ar = "Hello, World, Java";
         cs.split(ar);
+
+        //replace()
+        cs.replace("Hello", "H", "J");
+
+
 
 
         
     }
 
 }
+
+/* 
+charAt()
+concat()
+contains()
+endsWith()
+equals()
+equalsIgnoreCase()
+format()
+indexOf()
+isEmpty()
+join()
+lastIndexOf()
+length()
+matches()
+replace()
+replaceAll()
+replaceFirst()
+split()
+startsWith()
+substring()
+toLowerCase()
+toString()
+toUpperCase()
+trim()
+valueOf()
+    */
+
+
