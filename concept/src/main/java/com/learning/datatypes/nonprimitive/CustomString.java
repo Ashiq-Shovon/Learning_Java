@@ -65,17 +65,88 @@ public class CustomString {
         print(val.replace(oldChar, newChar));
     }
 
-    // public void replaceAll()
+    public void replaceFirst(String val, String oldChar, String newChar){
+        //The replaceFirst() method replaces the first occurrence of a specified character or substring in a string with another character or substring.
+        //It returns a new string that represents the replacement.
+        //The replaceFirst() method is case-sensitive.
+        //To perform a case-insensitive replacement, you can use the replaceAll() method.
+        //The replaceFirst() method doesn't change the original string.
+        print(val.replaceFirst(oldChar, newChar));
+    }
 
-    //difference between replace() and replaceAll()
-    //The replace() method replaces all occurrences of a specified character or substring in a string with another character or substring.
-    //The replaceAll() method replaces all occurrences of a specified character or substring in a string with another character or substring.
-    //The replaceAll() method is case-sensitive.
-    //To perform a case-insensitive replacement, you can use the replaceAll() method.
-    //The replaceAll() method doesn't change the original string.
+    public void replaceAll(String val, String oldChar, String newChar){
+        //The replaceAll() method replaces all occurrences of a specified character or substring in a string with another character or substring.
+        //It returns a new string that represents the replacement.
+        //The replaceAll() method is case-sensitive.
+        //To perform a case-insensitive replacement, you can use the replaceAll() method.
+        //The replaceAll() method doesn't change the original string.
+        print(val.replaceAll(oldChar, newChar));
+    }
+
+    public void equals(String val1, String val2){
+        //The equals() method compares two strings.
+        //It returns true if the strings are equal, otherwise, it returns false.
+        //The comparison is case-sensitive.
+        //To perform a case-insensitive comparison, you can use the equalsIgnoreCase() method.
+        print(val1.equals(val2));
+    }
+
+    public void equalsIgnoreCase(String val1, String val2){
+        //The equalsIgnoreCase() method compares two strings.
+        //It returns true if the strings are equal, otherwise, it returns false.
+        //The comparison is case-insensitive.
+        //To perform a case-sensitive comparison, you can use the equals() method.
+        print(val1.equalsIgnoreCase(val2));
+    }
+
+
+    public void toLowerCase(String val){
+        //The toLowerCase() method converts all characters in a string to lowercase.
+        //It returns a new string that represents the lowercase string.
+        print(val.toLowerCase());
+    }
 
 
 
+    public void toUpperCase(String val){
+        //The toUpperCase() method converts all characters in a string to uppercase.
+        //It returns a new string that represents the uppercase string.
+        print(val.toUpperCase());
+    }
+
+    public void startsWith(String val, String prefix){
+        //The startsWith() method checks whether a string starts with a specified prefix.
+        //It returns true if the string starts with the specified prefix, otherwise, it returns false.
+        print(val.startsWith(prefix));
+    }
+
+
+    public void endsWith(String val, String suffix){
+        //The endsWith() method checks whether a string ends with a specified suffix.
+        //It returns true if the string ends with the specified suffix, otherwise, it returns false.
+        print(val.endsWith(suffix));
+    }
+
+    public void trim(String val){
+        //The trim() method removes leading and trailing whitespace from a string.
+        //It returns a new string that represents the trimmed string.
+        print(val.trim());
+    }
+
+    public void toString(Object val){
+        //The toString() method returns the string representation of an object.
+        //If you print an object, the toString() method is called implicitly.
+        print(val.toString());
+    }
+
+    public void subString(String val, int start, int end){
+        //The substring() method extracts a substring from a string.
+        //It returns a new string that represents the extracted substring.
+        //The substring() method has two variants:
+        //substring(int beginIndex): It returns a substring that starts from the specified index to the end of the string.
+        //substring(int beginIndex, int endIndex): It returns a substring that starts from the specified beginIndex and ends at the specified endIndex.
+        print(val.substring(start, end));
+    }
 
 
     //generic method to print any type of array
@@ -119,10 +190,46 @@ public class CustomString {
         cs.split(ar);
 
         //replace()
-        cs.replace("Hello", "H", "J");
+        cs.replace("Hello", "l", "J");
+
+        //equals()
+
+        cs.equals( "Hello", "hello");
+
+        //equalsIgnoreCase()
+        cs.equalsIgnoreCase("Hello", "hello");
 
 
+        //toLowerCase()
+        cs.toLowerCase("ArIjIt");
 
+
+        //toUpperCase()
+
+        cs.toUpperCase("ArIjIt");
+
+
+        //startsWith()
+        cs.startsWith("arif", "ari");
+
+        //endsWith()
+        cs.endsWith("arif", "if");
+
+        //trim()
+        cs.trim("  arif  ");
+
+
+        //toString()
+        cs.toString(123);
+
+        //replaceFirst()
+        cs.replaceFirst("Hello", "l", "j");
+
+        //replaceAll()
+        cs.replaceAll("Hellodflldfll", "l", "j");
+
+        //subString()
+        cs.subString("Hello", 1, 3);
 
         
     }
@@ -136,24 +243,24 @@ contains()
 endsWith()
 equals()
 equalsIgnoreCase()
-format()
+format() ddd
 indexOf()
 isEmpty()
 join()
-lastIndexOf()
+lastIndexOf() ddd
 length()
-matches()
+matches() dd
 replace()
 replaceAll()
 replaceFirst()
 split()
 startsWith()
-substring()
+substring() 
 toLowerCase()
 toString()
 toUpperCase()
 trim()
-valueOf()
+valueOf() ddd
     */
 
 
